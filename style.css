@@ -1,8 +1,3 @@
-body {
-  background-color: #1c1c1c;
-  font-family: sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +14,13 @@ nav {
   /* gap: 30px; */
   padding: 10px;
   margin-top: 10px;
+  font-family: sans-serif;
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 a {
@@ -27,7 +29,7 @@ a {
   font-weight: 600;
 }
 
-nav .left {
+nav .nav-left {
   padding: 10px;
   border: none;
   border-radius: 50px;
@@ -38,24 +40,28 @@ nav .left {
   font-size: 20px;
 }
 
-nav .right ul {
+nav .nav-right ul {
   display: flex;
   justify-content: center;
 }
 
-nav .right ul li {
+nav .nav-right ul li {
   padding: 10px;
   margin: 10px;
   list-style-type: none;
 }
 
-nav .right ul li a {
+nav .nav-right ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
 }
 
-nav .left {
+nav .nav-right ul li a:active, nav .nav-right ul li a:hover{
+  color: rgb(189, 189, 189);
+}
+
+nav .nav-left {
   padding: 10px;
   border: none;
   border-radius: 50px;
@@ -99,22 +105,565 @@ nav .left {
 }
 
 .active .search-box {
-  width: 250px;
+  width: 245px;
   border-bottom: 2px solid white;
   font-size: 15px;
   transition: 0.5s;
-  margin-right: 10px;
 }
 
 .active .search-btn {
-  transform: translate(210px, 2px) scale(0.8);
+  transform: translate(200px, 2px) scale(0.8);
   background-color: transparent;
 }
 
 .active .close-btn {
   z-index: 0;
-  transform: translate(250px, 2px);
+  transform: translate(240px, 2px);
 }
 
 /* navbar ends here */
 
+/* first layout starts here */
+
+.first-layout {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.first-layout .first-layout-left{
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: white;
+}
+
+.first-layout .first-layout-left h2{
+  margin-top: -20px;
+  font-size: 30px;
+}
+
+.first-layout .first-layout-left .first-layout-button{
+  padding: 20px;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent ;
+  margin-top: 10px;
+}
+
+.first-layout .first-layout-left .first-layout-button:hover{
+  background-color: rgb(179, 179, 196);
+  color: black;
+  border: none;
+  outline: none;
+  transition: 1s;
+}
+
+.first-layout .first-layout-right .intro-card{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px rgb(179, 179, 196);
+  /* border: 2px solid rgb(25, 22, 32); */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.first-layout .first-layout-right .intro-card .intro-card-info{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.first-layout .first-layout-right .intro-card .intro-card-info .info-1{
+  font-size: 18px;
+}
+
+.first-layout .first-layout-right .intro-card .intro-card-info .info-2{
+  font-size: 30px;
+}
+
+.first-layout .first-layout-right .intro-card .intro-card-info .explore-button{
+  padding: 15px;
+  margin-top: 10px;
+  margin: 10px;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent ;
+  box-sizing: border-box;
+}
+
+.first-layout .first-layout-right .intro-card .intro-card-info .explore-button:hover{
+  background-color: rgb(179, 179, 196);
+  color: black;
+  outline: none;
+  transition: 1s;
+}
+/* first layout ends here */
+
+
+/* comment section design starts here */
+
+.layout-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 150px;
+  margin-top: -100px;
+  width: 400px;
+}
+
+.layout-comment h2{
+  color: white;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+}
+
+.comment-info{
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 3px rgb(179, 179, 196);
+  border: none;
+  outline: none;
+}
+
+.layout-comment .comment-info{
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+
+.layout-comment .comment-info .comment-info-img .name{
+  position: relative;
+  bottom: 15px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.layout-comment .comment-info .comment-description {
+  position: relative;
+  left: 60px;
+  width: 216px;
+  font-family: sans-serif;
+} 
+/* comment section design ends here */
+
+/* main content desisgn starts here */
+
+.main-content-div{
+  height: 15rem;
+  width: 700px;
+  border: 2px solid red;
+  padding: 40px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 200px;
+  border-radius: 40px;
+  box-shadow: 0 2px 3px rgb(179, 179, 196);
+  border: none;
+  outline: none;
+}
+
+.main-content-div .date-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+}
+
+.main-content-div .date-div .main-date-div{
+  width:70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  bottom: 45px;
+  left: 250px;
+}
+
+.main-content-div .date-div .main-date-div .date{
+  background-color: white;
+  position: relative;
+  bottom: 8px;
+  left: -6px;
+  text-align: center;
+}
+
+.main-content-div .content-div{
+  display: flex;
+  position: relative;
+  bottom: 40px;
+}
+
+.main-content-div .content-div .content-title{
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.main-content-div .content-div .content-description{
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: white;
+  margin-left: 50px;
+}
+
+.main-content-div .social-icon {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+  bottom: 50px;
+}
+
+.main-content-div .social-icon i{
+  font-size: 28px;  
+  color: black; 
+  padding: 10px;
+}
+
+.main-content-div .social-icon p{
+  margin-top: 15px;
+  /* padding: 10px; */
+}
+
+.main-content-div .social-icon .like{
+  position: relative;
+  right: 38px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content-div .social-icon .like-icon{
+  position: relative;
+  right: 35px;
+}
+
+.main-content-div .social-icon .comment{
+  position: relative;
+  left: -2px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content-div .social-icon .comment-icon{
+  position: relative;
+  left: 30px;
+}
+
+.main-content-div-2{
+  position: relative;
+  bottom: 50px;
+}
+
+.main-content-div-3{
+  position: relative;
+  bottom: 100px;
+}
+
+/* main content desisgn ends here */
+
+
+/* card design starts here */
+
+.main-card-design{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.cards {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards .card{
+  width: 30%;
+  height: 300px;
+  background-color: rgb(45, 45, 58) ;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgb(179, 179, 196);
+  padding: 20px; 
+}
+
+.cards .card .card-date-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(45, 45, 58) ;
+  height: 100px;
+}
+
+.cards .card .card-date-div .card-main-date-div{
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  bottom: 34px;
+  left: 140px;
+}
+
+.cards .card .card-date-div .card-main-date-div .card-date{
+  background-color: white;
+  position: relative;
+  bottom: 8px;
+  left: -6px;
+  text-align: center;
+}
+
+.cards .card .card-title{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  margin-top: -30px;
+  text-align: center;
+  background-color: rgb(45, 45, 58) ;
+}
+
+.cards .card .card-element{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(45, 45, 58) ;
+}
+
+.cards-2 {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cards-2 .card{
+  width: 30%;
+  height: 300px;
+  background-color: rgb(45, 45, 58) ;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgb(179, 179, 196);
+  padding: 20px; 
+}
+
+.cards-2 .card .card-date-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  background-color: rgb(45, 45, 58) ;
+}
+
+.cards-2 .card .card-date-div .card-main-date-div{
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  bottom: 34px;
+  left: 140px;
+}
+
+.cards-2 .card .card-date-div .card-main-date-div .card-date{
+  background-color: white;
+  position: relative;
+  bottom: 8px;
+  left: -6px;
+  text-align: center;
+}
+
+.cards-2 .card .card-title{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  margin-top: -30px;
+  text-align: center;
+  background-color: rgb(45, 45, 58) ;
+}
+
+.cards-2 .card .card-element{
+  background-color: rgb(45, 45, 58) ;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.view-button{
+  border: none;
+  outline: none;
+  background-color: rgb(133, 60, 201);
+  padding: 17px;
+  margin: 20px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 39rem;
+  box-shadow: 0 2px 5px rgb(179, 179, 196);
+  color:white;
+  font-weight: 700;
+}
+
+/* card design ends here */
+
+
+.comment-section h1{
+  color: white;
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.comment-section .comment-cards{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  width: 100%;
+}
+
+.comment-section .comment-cards .comment-card{
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(45, 45, 58);
+  box-shadow: 0 2px 3px rgb(179, 179, 196);
+  padding: 20px;
+  width: 30%;
+}
+
+.comment-section .comment-cards .comment-card .user-name{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 79px;
+  margin-top: -37px;
+  background-color: rgb(45, 45, 58);
+}
+
+.comment-section .comment-cards .comment-card .comment-description{
+  padding: 20px;
+  margin-top: 18px;
+  color: white;
+  font-family: sans-serif;
+  line-height: 22px;
+  background-color: rgb(45, 45, 58);
+}
+
+.comment-section .comment-cards .comment-card .comment-user-image{
+  background-color: rgb(45, 45, 58);
+}
+
+.subscription-option{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  margin-top: 100px;
+}
+
+.subscription-option .subscription-left{
+  color: white;
+  position: relative;
+  right: 200px;
+  top: 100px;
+}
+
+.subscription-option .subscription-left h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.subscription-option .subscription-left h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subscription-option .subscription-right{
+  position: relative;
+  left: 40px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-option hr{
+  height: 300px;
+  margin-right: 150px;
+}
+
+.subscription-option .subscription-right input{
+  padding: 10px;
+  border-radius: 20px;
+  width: 250px;
+  font-size: 20px;
+  color: white;
+  border: 2px solid white;
+}
+
+.subscription-option .subscription-right button{
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  width: 120px;
+  background-color: rgb(133, 60, 201);
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 2px 2px rgb(136, 136, 156);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* footer design starts here */
+
+footer{
+  width: 100%;
+  height: 250px;
+  background-color: aqua;
+  position: relative;
+  top: 100px;
+}
+
+/* footer design ends here */

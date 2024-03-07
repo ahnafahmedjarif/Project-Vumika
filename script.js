@@ -21,4 +21,3 @@ closeBtn.addEventListener("click", function () {
 });
 
 // navbar coding ends here
-
